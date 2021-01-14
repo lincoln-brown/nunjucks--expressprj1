@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{%block main %}
+<div>
+{% if users %}
+    {%for user in users %}
+    <div class="profile">
+       <div class="pic"><img class="profilepic" src="{{user.photo}}"/></div>
+       <div class="info"> 
+        <h6>{{user.first_name}} {{user.last_name}}</h6>
+        <h6>{{user.gender}}</h6>
+        <h6>{{user.Email}}</h6></div>
+        <form method="get" action="/">
+            <button class="btn btn-success vpbtn">View Profile</button>
+        </form>
+       
+        
+    </div>
+    {%endfor%}
+{%endif%}
+</div>
+{%endblock%}
